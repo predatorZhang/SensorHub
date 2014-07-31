@@ -7,6 +7,6 @@ namespace SensorHub.Servers.Commands
 {
     public class RQFilter
     {
-
+      
     }
 }
