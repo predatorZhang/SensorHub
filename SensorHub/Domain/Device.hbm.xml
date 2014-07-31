@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"  encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Domain" namespace="Domain">
+  <class name="Domain.AlarmInfo, Domain" table="ALARMINFO">
+    <id name="dbID" column="DBID" type="int" unsaved-value="0">
+      <generator class="native" />
+    </id>
+    <property name="longitude" column="LONGITUDE" type="double" />
+    <property name="latitude" column="LATITUDE" type="double"  />
+    <property name="macID" column="MACID" type="string"  />
+    <property name="isAvailable" column="ISAVAILABLE" type="bollean" />
+    
+    <many-to-one name="region"  column="REGION_ID"/>
+    <many-to-one name="deviceType" column="DEVICETYPE_ID"/>
+    <many-to-one name="post" column="POST_ID"/>
+    
+    <bag name="deviceParams">
+      <key column="DEVICE_ID" />
+      <one-to-many class="Device"/>
+    </bag>
+
+    <bag name="alarmInfo">
+      <key column="DEVICE_ID" />
+      <one-to-many class="AlarmInfo"/>
+    </bag>
+  </class>
+</hibernate-mapping>
