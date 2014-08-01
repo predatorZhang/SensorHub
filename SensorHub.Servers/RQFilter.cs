@@ -10,20 +10,22 @@ namespace SensorHub.Servers.Commands
 {
     public class RQFilter : FixedHeaderReceiveFilter<BinaryRequestInfo>
     {
-        public class RQFilter()
-         :base(4)
-        {
+       public RQFilter()
+            :base(6)
+        { 
 
         }
+
         protected override int GetBodyLengthFromHeader(byte[] header, int offset, int length)
         {
-
-            return (int)header[offset + 4] * 256 + (int)header[offset + 5];
+           // return (int)header[offset + 4] * 256 + (int)header[offset + 5];
+            return 18;
         }
 
         protected override BinaryRequestInfo ResolveRequestInfo(ArraySegment<byte> header, byte[] bodyBuffer, int offset, int length)
         {
-            return new BinaryRequestInfo(Encoding.UTF8.GetString(header.Array, header.Offset, 4), bodyBuffer.CloneRange(offset, length));
+            return new BinaryRequestInfo(BitConverter.ToString(header.Array, header.Offset, 4), bodyBuffer.CloneRange(offset, length));
+           // return new BinaryRequestInfo(Encoding.UTF8.GetString(header.Array, header.Offset, 4), bodyBuffer.CloneRange(offset, length));
         }
-    }
+     }
 }

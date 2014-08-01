@@ -8,9 +8,9 @@ using SuperSocket.Common;
 
 namespace SensorHub.Servers.Commands
 {
-    public class RQFilter : FixedHeaderReceiveFilter<BinaryRequestInfo>
+    public class LSFilter : FixedHeaderReceiveFilter<BinaryRequestInfo>
     {
-        public RQFilter()
+        public LSFilter()
             :base(6)
         { 
 

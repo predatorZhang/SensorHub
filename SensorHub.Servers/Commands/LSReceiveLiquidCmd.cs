@@ -23,7 +23,7 @@ namespace SensorHub.Servers.Commands
             byte[] body = requestInfo.Body;
             if (!string.IsNullOrEmpty(session.MacID))
             {
-                session.MacID=Encoding.ASCII.GetString(byte,5,6);
+                session.MacID=Encoding.ASCII.GetString(body,5,6);
             }
             DjLiquidInfo liquid=new DjLiquidInfo ();
             liquid.DEVID=session.MacID;

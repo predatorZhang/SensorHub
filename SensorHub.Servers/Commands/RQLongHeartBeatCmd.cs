@@ -17,12 +17,14 @@ namespace SensorHub.Servers.Commands
         {
             get
             {
-                return "RQLongConnectionHeartBeat";
+                return "7D-01-00-16";
+                //return "RQLongConnectionHeartBeat";
             }
         }
 
         public override void ExecuteCommand(RQSession session, BinaryRequestInfo requestInfo)
         {
+            Console.WriteLine("进入这个操作了");
             byte[] rBody = requestInfo.Body;
             if (!string.IsNullOrEmpty(session.MacID))
             {
