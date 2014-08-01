@@ -20,7 +20,7 @@ namespace SensorHub.BLL
             {
                 return;
             }
-            if (press.DEVID <= 0)
+            if (string.IsNullOrEmpty(press.DEVID))
             {
                 return;
             }

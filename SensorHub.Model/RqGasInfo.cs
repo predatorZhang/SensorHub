@@ -8,7 +8,7 @@ namespace SensorHub.Model
     public class RqGasInfo
     {
         private long dbId;
-        private long devId;
+        private string devId;
         private string leakData;
         private string inPress;
         private string outPress;
@@ -23,10 +23,10 @@ namespace SensorHub.Model
             set { dbId = value; }
         }
 
-        public long DEVID
+        public string DEVID
         {
-            get { return dbId; }
-            set { dbId = value; }
+            get { return devId; }
+            set { devId = value; }
         }
 
         public string LEAKDATA

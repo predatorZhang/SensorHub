@@ -9,7 +9,7 @@ namespace SensorHub.Model
     {
         private long dbId;
         //设备ID
-        private long devId;
+        private string devId;
         private string insData;
         private string netData;
         private string posData;
@@ -27,10 +27,10 @@ namespace SensorHub.Model
         }
 
         //设备ID
-        public long DEVID
+        public string DEVID
         {
-            get { return dbId; }
-            set { dbId = value; }
+            get { return devId; }
+            set { devId = value; }
         }
 
         //瞬时流量

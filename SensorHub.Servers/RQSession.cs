@@ -8,13 +8,17 @@ using SuperSocket.SocketBase.Protocol;
 
 namespace SensorHub.Servers
 {
-    public class RQSession :AppSession<RQSession, BinaryRequestInfo>
+    public class RQSession : AppSession<RQSession, BinaryRequestInfo>
     {
         private string macID;
 
         private string productCompany;
 
         private string sensorType;
+
+        private string ip;
+
+        private List<double> rqData;
 
         public string SensorType
         {
@@ -33,6 +37,18 @@ namespace SensorHub.Servers
             get { return macID; }
             set { macID = value; }
         }
-    
+
+        public string IP
+        {
+            get { return ip; }
+            set { ip = value; }
+        }
+
+        public List<double> RQDATA
+        {
+            get { return rqData; }
+            set { rqData = value; }
+        }
+
     }
 }

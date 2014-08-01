@@ -20,7 +20,7 @@ namespace SensorHub.BLL
             {
                 return;
             }
-            if (gas.DEVID <= 0)
+            if (string.IsNullOrEmpty(gas.DEVID))
             {
                 return;
             }

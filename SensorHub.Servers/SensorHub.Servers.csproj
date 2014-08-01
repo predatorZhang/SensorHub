@@ -32,25 +32,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>C:\Users\admin\Desktop\superSocket_DLL\log4net.dll</HintPath>
+      <HintPath>..\bin\log4net.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.Common">
-      <HintPath>C:\Users\admin\Desktop\superSocket_DLL\SuperSocket.Common.dll</HintPath>
+      <HintPath>..\bin\SuperSocket.Common.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.Facility">
       <HintPath>..\..\supersocket1.6.2binary\net40\Debug\SuperSocket.Facility.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.ServerManager">
-      <HintPath>C:\Users\admin\Desktop\superSocket_DLL\SuperSocket.ServerManager.dll</HintPath>
+      <HintPath>..\bin\SuperSocket.ServerManager.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.SocketBase">
-      <HintPath>C:\Users\admin\Desktop\superSocket_DLL\SuperSocket.SocketBase.dll</HintPath>
+      <HintPath>..\bin\SuperSocket.SocketBase.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.SocketEngine">
-      <HintPath>C:\Users\admin\Desktop\superSocket_DLL\SuperSocket.SocketEngine.dll</HintPath>
+      <HintPath>..\bin\SuperSocket.SocketEngine.dll</HintPath>
     </Reference>
     <Reference Include="SuperSocket.WebSocket">
-      <HintPath>C:\Users\admin\Desktop\superSocket_DLL\SuperSocket.WebSocket.dll</HintPath>
+      <HintPath>..\bin\SuperSocket.WebSocket.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -61,6 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\LSFlowSetCmd.cs" />
+    <Compile Include="Commands\LSNoiseSetCmd.cs" />
+    <Compile Include="Commands\LSPressSet.cs" />
+    <Compile Include="Commands\LSReceiveLiquidCmd.cs" />
+    <Compile Include="Commands\LSReceivePressCmd.cs" />
+    <Compile Include="Commands\LSReciveFlowCmd.cs" />
+    <Compile Include="Commands\LSReciveNoiseCmd.cs" />
+    <Compile Include="Commands\SLGPRSCommunicationCmd.cs" />
+    <Compile Include="Commands\SLGPRSResetCmd.cs" />
+    <Compile Include="Commands\SLUploadCmd.cs" />
     <Compile Include="RQFilter.cs" />
     <Compile Include="Commands\RQLongHeartBeatCmd.cs" />
     <Compile Include="Commands\RQShortHeartBearCmd.cs" />
@@ -77,7 +87,16 @@
     <Compile Include="SLSession.cs" />
     <Compile Include="SLFilter.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SensorHub.BLL\SensorHub.BLL.csproj">
+      <Project>{8C2260D4-3E32-4C00-BDDA-BED82DE00BE4}</Project>
+      <Name>SensorHub.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SensorHub.Model\SensorHub.Model.csproj">
+      <Project>{7DC80059-361D-41BB-8EE1-BD23D21F9F2B}</Project>
+      <Name>SensorHub.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,7 +8,7 @@ namespace SensorHub.Model
     public class DjPressInfo
     {
         private long dbId;
-        private long devId;
+        private string devId;
         private string pressData;
         private string pressPower;
         private string sensorPower;
@@ -21,7 +21,7 @@ namespace SensorHub.Model
             set { dbId = value; }
         }
 
-        public long DEVID
+        public string DEVID
         {
             get { return devId; }
             set { devId = value; }
@@ -36,6 +36,11 @@ namespace SensorHub.Model
         {
             get { return pressPower; }
             set { pressPower = value; }
+        }
+        public string SENSORPOWER
+        {
+            get { return sensorPower; }
+            set { SENSORPOWER = value; }
         }
         public string DATATIME
         {

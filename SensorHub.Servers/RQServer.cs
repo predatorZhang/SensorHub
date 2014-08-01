@@ -6,7 +6,7 @@ using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Protocol;
 namespace SensorHub.Servers
 {
-    public class LSServer : AppServer<LSSession, BinaryRequestInfo>
+    public class RQServer : AppServer<LSSession, BinaryRequestInfo>
     {
 
     }

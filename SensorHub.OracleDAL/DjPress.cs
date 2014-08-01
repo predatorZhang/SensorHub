@@ -88,21 +88,29 @@ namespace SensorHub.OracleDAL
             {
                 parms[3].Value = DBNull.Value;
             }
-            if (null != press.DATATIME)
+            if (null != press.SENSORPOWER)
             {
-                parms[4].Value = press.DATATIME;
+                parms[4].Value = press.SENSORPOWER;
             }
             else
             {
                 parms[4].Value = DBNull.Value;
             }
-            if (null != press.RECORDTIME)
+            if (null != press.DATATIME)
             {
-                parms[5].Value = press.RECORDTIME;
+                parms[5].Value = press.DATATIME;
             }
             else
             {
                 parms[5].Value = DBNull.Value;
+            }
+            if (null != press.RECORDTIME)
+            {
+                parms[6].Value = press.RECORDTIME;
+            }
+            else
+            {
+                parms[6].Value = DBNull.Value;
             }
         }
 
@@ -119,7 +127,7 @@ namespace SensorHub.OracleDAL
             {
                 parms = new OracleParameter[]{					                            
                                         new OracleParameter(PARM_DBID, OracleType.Number,19),
-                                        new OracleParameter(PARM_DEVID, OracleType.Number, 19),
+                                        new OracleParameter(PARM_DEVID, OracleType.NVarChar, 19),
                                         new OracleParameter(PARM_PRESSDATA, OracleType.NVarChar, 255),
                                         new OracleParameter(PARM_PRESSPOWER, OracleType.NVarChar, 255),
                                          new OracleParameter(PARM_SENSORPOWER, OracleType.NVarChar, 255),

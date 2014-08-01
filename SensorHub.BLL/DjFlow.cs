@@ -20,7 +20,7 @@ namespace SensorHub.BLL
             {
                 return;
             }
-            if (flow.DEVID <= 0)
+            if (string.IsNullOrEmpty(flow.DEVID))
             {
                 return;
             }

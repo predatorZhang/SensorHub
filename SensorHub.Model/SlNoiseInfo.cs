@@ -8,7 +8,7 @@ namespace SensorHub.Model
     public class SlNoiseInfo
     {
         private long dbId;
-        private long devId;
+        private string devId;
         private string looseData;
         private string denseData;
         private string sensorPower;
@@ -21,7 +21,7 @@ namespace SensorHub.Model
             set { dbId = value; }
         }
 
-        public long DEVID
+        public string DEVID
         {
             get { return devId; }
             set { devId = value; }

@@ -5,12 +5,13 @@ using System.Text;
 
 namespace SensorHub.Model
 {
-    public class DjNoiseInfo
+    public class DjLiquidInfo
     {
         private long dbId;
         private string devId;
-        private string looseData;
-        private string denseData;
+        private string pressData;
+        private string liquidPower;
+        private string sensorPower;
         private string dataTime;
         private string recordTime;
 
@@ -19,20 +20,27 @@ namespace SensorHub.Model
             get { return dbId; }
             set { dbId = value; }
         }
+
         public string DEVID
         {
             get { return devId; }
             set { devId = value; }
         }
-        public string LOOSEDATA
+
+        public string LIQUIDDATA
         {
-            get { return looseData; }
-            set { looseData = value; }
+            get { return pressData; }
+            set { pressData = value; }
         }
-        public string DENSEDATA
+        public string LIQUIDPOWER
         {
-            get { return denseData; }
-            set { denseData = value; }
+            get { return liquidPower; }
+            set { liquidPower = value; }
+        }
+        public string SENSORPOWER
+        {
+            get { return sensorPower; }
+            set { SENSORPOWER = value; }
         }
         public string DATATIME
         {

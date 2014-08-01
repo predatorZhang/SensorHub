@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DjFlowInfo.cs" />
+    <Compile Include="DjLiquidInfo.cs" />
     <Compile Include="DjNoiseInfo.cs" />
     <Compile Include="DjPressInfo.cs" />
     <Compile Include="SlNoiseInfo.cs" />

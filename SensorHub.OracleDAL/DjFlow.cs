@@ -163,7 +163,7 @@ namespace SensorHub.OracleDAL
             {
                 parms = new OracleParameter[]{					                            
                                         new OracleParameter(PARM_DBID, OracleType.Number,19),
-                                        new OracleParameter(PARM_DEVID, OracleType.Number, 19),
+                                        new OracleParameter(PARM_DEVID, OracleType.NVarChar, 19),
                                         new OracleParameter(PARM_INSDATA, OracleType.NVarChar, 255),
                                         new OracleParameter(PARM_NETDATA, OracleType.NVarChar, 255),
                                         new OracleParameter(PARM_POSDATA, OracleType.NVarChar,255),

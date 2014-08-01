@@ -11,6 +11,10 @@ namespace SensorHub.Servers
     {
         private string macID;
 
+        private string srcId;
+
+        private string tagId;
+
         private string productCompany;
 
         private string sensorType;
@@ -31,6 +35,18 @@ namespace SensorHub.Servers
         {
             get { return macID; }
             set { macID = value; }
+        }
+
+        public string SRCID
+        {
+            get { return srcId; }
+            set { srcId = value; }
+        }
+
+        public string TAGID
+        {
+            get { return tagId; }
+            set { tagId = value; }
         }
     }
 }
